@@ -5,8 +5,4 @@ composer.lock
 .DS_Store
 .idea
 
-/app/database/migrations/
-/app/controllers/ItemController.php
-/app/models/Item
-/app/models/Item.php
-/app/views/item/
+/app/database/production.sqlite
