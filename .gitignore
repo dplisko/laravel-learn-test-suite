@@ -4,5 +4,5 @@ composer.phar
 composer.lock
 .DS_Store
 .idea
-
+_ide_helpers.php
 /app/database/production.sqlite

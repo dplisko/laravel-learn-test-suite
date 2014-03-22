@@ -31,18 +31,18 @@ class ExampleTest extends TestCase
         $item->delete();
         $review->delete();
     }
-//
-//    public function testCannotCreateReviewWithEmptyAuthor()
-//    {
-//        $review = new Item\Review;
-//        $this->assertEquals(false, $review->save());
-//
-//        $review = new Item\Review;
-//        $review->author = "test";
-//        $this->assertEquals(true, $review->save());
-//
-//        $review->delete();
-//    }
+
+    public function testCannotCreateReviewWithEmptyAuthor()
+    {
+        $review = new Item\Review;
+        $this->assertEquals(false, $review->save());
+
+        $review = new Item\Review;
+        $review->author = "test";
+        $this->assertEquals(true, $review->save());
+
+        $review->delete();
+    }
 //
 //
 //    public function testShowItem()
