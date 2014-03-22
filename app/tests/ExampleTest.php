@@ -1,5 +1,7 @@
 <?php
 
+use Item\Review;
+
 class ExampleTest extends TestCase
 {
     public function testCreateItem()
@@ -14,23 +16,21 @@ class ExampleTest extends TestCase
         $this->assertEquals($itemsCount, Item::count());
     }
 
-//    public function testHasManyReviews()
-//    {
-//        $review = new Item\Review;
-//        $review->author = 'Slava';
-//        $review->review = "А че, хороший товар!";
-//
-//        $item = new Item;
-//        $item->title = "Первый товар";
-//        $item->save();
-//
-//        $item->reviews()->save($review);
-//
-//        $this->assertEquals($item->reviews()->count(), 1);
-//
-//        $item->delete();
-//        $review->delete();
-//    }
+    public function testHasManyReviews()
+    {
+        $review = new Review;
+        $review->author = 'Slava';
+        $review->review = "А че, хороший товар!";
+        $item = new Item;
+        $item->title = "Первый товар";
+        $item->save();
+        $item->reviews()->save($review);
+
+        $this->assertEquals($item->reviews()->count(), 1);
+
+        $item->delete();
+        $review->delete();
+    }
 //
 //    public function testCannotCreateReviewWithEmptyAuthor()
 //    {

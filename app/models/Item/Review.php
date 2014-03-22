@@ -10,5 +10,7 @@ namespace Item;
 
 
 class Review extends \Eloquent{
-
+    public function item(){
+        return $this->belongsTo('Item');
+    }
 } 

@@ -7,5 +7,7 @@
  */
 
 class Item extends Eloquent{
-
+    public function reviews(){
+        return $this->hasMany('Item\Review');
+    }
 } 
